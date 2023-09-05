@@ -1,0 +1,2 @@
+# OpenMiniCarWorks
+ミニカーのオープン化にむけた作業領域です
