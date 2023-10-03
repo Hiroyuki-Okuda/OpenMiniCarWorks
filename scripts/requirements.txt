@@ -1,0 +1,7 @@
+opencv-python==4.8.0.76
+numpy==1.24.3
+typing==3.7.4.3
+RPi.GPIO==0.7.1
+pigpio==1.78
+numpy==1.24.3
+rplidar-roboticia==0.9.5
