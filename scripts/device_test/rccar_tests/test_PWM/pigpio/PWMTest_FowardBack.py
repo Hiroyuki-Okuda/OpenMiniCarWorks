@@ -5,11 +5,17 @@ import time
 print("start PWM initialization...")
 GPIO.setmode(GPIO.BCM)
 
-gppin_str = 18
+gppin_str = 13
+gppin_acc = 12
 
 GPIO.setup(gppin_str, GPIO.OUT)
 servo_str = GPIO.PWM(gppin_str, 60)
 servo_str.start(0)
+
+GPIO.setup(gppin_acc, GPIO.OUT)
+servo_acc = GPIO.PWM(gppin_acc, 60)
+servo_acc.start(0)
+
 
 #
 scale = 0.4 / 17.25 
@@ -19,7 +25,11 @@ str_M = str_n + scale # 1.9 / 17.25
 
 duty = 8.695
 
+print("neutral")
+
 servo_str.ChangeDutyCycle( duty)
+servo_acc.ChangeDutyCycle( 8.695)
+time.sleep(1)
 
 print("start control loop")
 
@@ -30,6 +40,7 @@ for i in range(11):
     d = duty + j
     print("d", d)
     servo_str.ChangeDutyCycle( d  )
+    servo_acc.ChangeDutyCycle( d  )
     j = j + 0.2
     time.sleep(1)
     
