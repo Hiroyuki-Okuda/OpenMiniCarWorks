@@ -41,7 +41,7 @@ Delta_Jog = 0.05 # jog stepping
 PWM_Hz = 70 
 PWM_NeutralStr = 10.00  #@70Hz
 PWM_NeutralSpd = 10.48 #@70Hz
-PWM_CruiseSpd = 10.48 + 1.4 #@70Hz # Cruising speed 
+PWM_CruiseSpd = 10.48 - 1.4 #@70Hz # Cruising speed 
 
 spd_ref = PWM_NeutralSpd
 str_ref = PWM_NeutralStr

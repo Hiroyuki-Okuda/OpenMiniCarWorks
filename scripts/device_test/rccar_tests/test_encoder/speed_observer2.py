@@ -12,7 +12,7 @@ class SpeedObserver(object):
             A_PIN: int = 22,
             B_PIN: int = 27,
             n_teeth: int = 36,
-            wheel_diameter: float = 0.06
+            wheel_diameter: float = 0.0660
         ):
         '''
         Add speed to queue from encoder.
