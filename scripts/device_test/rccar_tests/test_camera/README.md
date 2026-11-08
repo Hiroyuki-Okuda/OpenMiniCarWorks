@@ -140,8 +140,8 @@ Demonstrates how to retrieve camera frames using Picamera2 and display them usin
 Demonstrates how to record video using Picamera2.
 - Initialize and configure the camera for video recording.
 - Set up a video encoder (e.g., H264Encoder).
-- Start recording using start_recording().
-- Stop recording using stop_recording().
+- Start recording using `start_recording()`.
+- Stop recording using `stop_recording()`.
 Note: The video recording example is an additional test demonstrating continuous video capture and encoding. It might not be used for simple autonomous racing car purposes.
 
 
