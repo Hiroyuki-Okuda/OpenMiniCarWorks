@@ -1,7 +1,7 @@
 
 from rplidar import RPLidar
 
-PORT = '/dev/ttyUSB0'
+PORT = '/dev/ttyUSB0'  # Change this if the LiDAR uses another port.
 
 # Obstacle detection parameters
 DETECTION_ANGLE = 30       # degrees (left/right)
@@ -43,6 +43,7 @@ def detect_obstacle(scan):
 
 
 def main():
+    # Read scans until Ctrl+C is pressed.
     lidar = RPLidar(PORT)
 
     try:
@@ -60,6 +61,7 @@ def main():
         print("\nStopping obstacle detection...")
 
     finally:
+        # Stop scanning and the motor, then close the connection.
         lidar.stop()
         lidar.stop_motor()
         lidar.disconnect()
